@@ -53,7 +53,7 @@ flora <- wildflower |>
   filter(!is.na(start_month), !is.na(end_month)) |>
   mutate(
     start_doy = yday(make_date(2020, start_month, 1)),
-    end_doy = yday(make_date(2020, end_month + 1, 1) - 1),
+    end_doy = yday(ceiling_date(make_date(2020, end_month, 1), "month") - 1),  # last day of end month (Dec -> 366)
     peak_doy_flora = start_doy + (end_doy - start_doy) / 2,
     dur_flora = end_doy - start_doy,
 

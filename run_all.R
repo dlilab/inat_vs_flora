@@ -4,7 +4,7 @@
 #   Rscript run_all.R
 # Scripts are run in order; later scripts use outputs written by earlier ones.
 
-for (d in c("data_output", "figures/wildflower", "figures/calflora", "figures/combined")) {
+for (d in c("data_output", "figures/wildflower", "figures/calflora", "figures/combined", "figures/sensitivity")) {
   dir.create(d, recursive = TRUE, showWarnings = FALSE)
 }
 
@@ -13,7 +13,8 @@ scripts <- c(
   "code/02_compare_calflora.R",               # regional comparison (Jepson eFlora via CalFlora)
   "code/03_combined_figures.R",               # combined main-text figures
   "code/04_flora_jitter_sensitivity.R",       # sensitivity to monthly resolution of flora records
-  "code/05_range_size_effort_robustness.R"    # range-size effect controlling for observation effort
+  "code/05_range_size_effort_robustness.R",   # range-size effect controlling for observation effort
+  "code/06_tail_sensitivity.R"                # sensitivity to the tail proportion for onset/offset (Figure S1)
 )
 
 for (s in scripts) {

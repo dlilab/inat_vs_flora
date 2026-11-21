@@ -28,6 +28,7 @@ Required R packages: `tidyverse`, `lubridate`, `sf`, `phylolm`, `broom`, `phytoo
 | `03_combined_figures.R` | Combined national + regional main-text figures | `figures/combined/` |
 | `04_flora_jitter_sensitivity.R` | Monte Carlo sensitivity of the results to the monthly resolution of flora data | `data_output/flora_jitter_sensitivity.rds` |
 | `05_range_size_effort_robustness.R` | Range-size PGLS controlling for number of observations / grid cells | `data_output/range_effort_robustness.rds` |
+| `06_tail_sensitivity.R` | Sensitivity of the results to the tail proportion (5%, 10%, 15%) used to aggregate grid-cell onset/offset to species level | `data_output/sensitivity_results.rds`, `figures/sensitivity/fig_sensitivity.pdf` |
 
 ## Data (`data/`)
 
